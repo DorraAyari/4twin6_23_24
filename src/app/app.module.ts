@@ -16,6 +16,10 @@ import { ShowUsersComponent } from './core/manageUser/show-users/show-users.comp
 import { AddUserComponent } from './core/manageUser/add-user/add-user.component';
 import { UpdateUserComponent } from './core/manageUser/update-user/update-user.component';
 import { DeleteUserComponent } from './core/manageUser/delete-user/delete-user.component';
+import { AuthModule } from './core/manageUser/auth/auth.module';
+import { AuthRoutingModule } from './core/manageUser/auth/auth-routing.module';
+import { ManageProductModule } from './core/manage-product/manage-product.module';
+import { ListProductsComponent } from './list-products/list-products.component';
 
 @NgModule({
   declarations: [
@@ -27,16 +31,16 @@ import { DeleteUserComponent } from './core/manageUser/delete-user/delete-user.c
     NotfoundComponent,
     LoginComponent,
     NavbarComponent,
-    DetailUserComponent,
-    ShowUsersComponent,
-    AddUserComponent,
-    UpdateUserComponent,
-    DeleteUserComponent
+    ListProductsComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AuthModule,
+    ManageProductModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,12 @@
+<h2>Liste des Produits</h2>
+<ul>
+  <li *ngFor="let product of ListProduct">
+    <strong>ID:</strong> {{ product.id }}<br>
+    <strong>Code:</strong> {{ product.code }}<br>
+    <strong>Libellé:</strong> {{ product.libelle }}<br>
+    <strong>Prix unitaire:</strong> {{ product.prixunitaire }}<br>
+    <strong>Taux TVA:</strong> {{ product.tauxTva }}<br>
+    <button (click)="calculateProductCount(product.libelle)">Calculer</button>
+    <span *ngIf="productCountMap[product.libelle] !== undefined">Nombre de produits avec le même libellé : {{ productCountMap[product.libelle] }}</span>
+  </li>
+</ul>
