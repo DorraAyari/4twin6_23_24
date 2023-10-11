@@ -17,7 +17,9 @@ export class ListProductsComponent implements OnInit {
     this.ListProduct = this.productService.getAllProducts();
   }
   calculateProductCount(libelle: string) {
+    console.log(libelle); 
     const count = this.productService.getNbProductsByLibelle(libelle);
     this.productCountMap[libelle] = count;
   }
+
 }
