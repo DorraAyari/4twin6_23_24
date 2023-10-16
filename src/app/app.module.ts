@@ -20,6 +20,9 @@ import { AuthModule } from './core/manageUser/auth/auth.module';
 import { AuthRoutingModule } from './core/manageUser/auth/auth-routing.module';
 import { ManageProductModule } from './core/manage-product/manage-product.module';
 import { ListProductsComponent } from './list-products/list-products.component';
+import { MainInvoiceComponent } from './main-invoice/main-invoice.component';
+import { InvoiceListComponent } from './invoice-list/invoice-list.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { ListProductsComponent } from './list-products/list-products.component';
     LoginComponent,
     NavbarComponent,
     ListProductsComponent,
+    MainInvoiceComponent,
+    InvoiceListComponent,
+    InvoiceComponent,
 
   ],
   imports: [

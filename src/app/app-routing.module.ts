@@ -11,17 +11,22 @@ import { FirstComponent } from './first/first.component';
 import { ListProductsComponent } from './list-products/list-products.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { NotfoundComponent } from './shared/notfound/notfound.component';
+import { MainInvoiceComponent } from './main-invoice/main-invoice.component';
+import { InvoiceListComponent } from './invoice-list/invoice-list.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
   { path: 'produit', component: ListProductsComponent },
+  { path: 'mainInvoice', component: MainInvoiceComponent },
+  {path:'invoices',component:InvoiceListComponent},
+  { path: 'invoice/:id/:active', component: InvoiceComponent },
 
  {path:'user',component:ListUserComponent},
  {path:'first', component:FirstComponent},
  {path:'**',component:NotfoundComponent},
  {path:'manage',loadChildren:()=>import('../app/core/manageUser/auth/auth.module').then(m=>m.AuthModule)},
-
 
 
 ];

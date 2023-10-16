@@ -1,0 +1,17 @@
+<div>
+  <h2>Détails de la Facture {{ id }}</h2>
+  <ng-container *ngIf="active; else messageTemplate">
+    <p>ID Facture : {{ id }}</p>
+    <p>Montant Facture : {{ invoice.montantFacture }}</p>
+    <p>Date Facture : {{ invoice.dateFacture }}</p>
+    <p>montant Remise: {{ invoice.montantRemise }}</p>
+
+  </ng-container>
+  <ng-template #messageTemplate>
+    <p>Impossible de visualiser les détails de la facture.</p>
+  </ng-template>
+</div>
+<div>
+  <button (click)="retour()">Retour</button>
+</div>
+
